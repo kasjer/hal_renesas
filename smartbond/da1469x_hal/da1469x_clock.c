@@ -290,7 +290,7 @@ da1469x_clock_sys_pll_enable(void)
 }
 
 void
-da1469x_clock_pll_disable(void)
+da1469x_clock_sys_pll_disable(void)
 {
     while (CRG_TOP->CLK_CTRL_REG & CRG_TOP_CLK_CTRL_REG_RUNNING_AT_PLL96M_Msk) {
         CRG_TOP->CLK_SWITCH2XTAL_REG = CRG_TOP_CLK_SWITCH2XTAL_REG_SWITCH2XTAL_Msk;
